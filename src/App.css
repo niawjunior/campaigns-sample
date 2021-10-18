@@ -1,0 +1,13 @@
+.item-slick {
+  min-width: 400px;
+  min-height: 300px;
+  background: #1976d2;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff;
+}
+
+body {
+  background-color: #ffffff !important;
+}

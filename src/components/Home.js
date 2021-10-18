@@ -1,11 +1,15 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Layout from "./Layout";
+import Slide from "./Slide";
+import "../App.css";
 function Home() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box style={{ minHeight: "100vh" }} sx={{ flexGrow: 1 }}>
       <Layout>
-        <h1>home</h1>
+        <Box marginTop="5vh">
+          <Slide />
+        </Box>
       </Layout>
     </Box>
   );
