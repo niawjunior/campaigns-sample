@@ -28,7 +28,7 @@ const Subscribe = () => {
           />
           <Button
             onClick={handleSubscribe}
-            id="subscribe-button"
+            id="subscribe_email_button"
             fullWidth
             variant="contained"
             style={{ marginTop: "1rem" }}

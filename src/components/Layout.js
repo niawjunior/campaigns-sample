@@ -47,6 +47,7 @@ function Layout({ children }) {
         <AppBar position="static">
           <Toolbar>
             <IconButton
+              id="nav_bar_toggle_drawer"
               onClick={() => toggleDrawer(true)}
               size="large"
               edge="start"
@@ -57,6 +58,7 @@ function Layout({ children }) {
               <MenuIcon />
             </IconButton>
             <Typography
+              id="nav_bar_home_page_link"
               style={{ textDecoration: "none" }}
               component={Link}
               to={"/"}
@@ -66,7 +68,12 @@ function Layout({ children }) {
             >
               Web campaign
             </Typography>
-            <Button component={Link} to={"/subscribe"} color="inherit">
+            <Button
+              id="nav_bar_subscribe_button"
+              component={Link}
+              to={"/subscribe"}
+              color="inherit"
+            >
               Subscribe
             </Button>
           </Toolbar>
