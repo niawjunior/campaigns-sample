@@ -13,10 +13,11 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Layout({ children }) {
   const [state, setState] = useState(false);
-
+  const location = useLocation();
+  console.log(location);
   const toggleDrawer = (open) => {
     setState(open);
   };
@@ -69,10 +70,33 @@ function Layout({ children }) {
               Web campaign
             </Typography>
             <Button
+              id="nav_bar_second_home_loan"
+              component={Link}
+              to={"/second-home-loan"}
+              variant="text"
+              color="inherit"
+              style={{
+                background:
+                  location?.pathname === "/second-home-loan"
+                    ? "rgba(0, 0, 0, 0.04)"
+                    : null,
+              }}
+            >
+              Second Home Loan
+            </Button>
+            <Button
               id="nav_bar_subscribe_button"
               component={Link}
               to={"/subscribe"}
+              variant="text"
               color="inherit"
+              style={{
+                marginLeft: "10px",
+                background:
+                  location?.pathname === "/subscribe"
+                    ? "rgba(0, 0, 0, 0.04)"
+                    : null,
+              }}
             >
               Subscribe
             </Button>
