@@ -7,15 +7,19 @@ import Snackbar from "@mui/material/Snackbar";
 import Layout from "./Layout";
 const Subscribe = () => {
   const [email, setEmail] = useState("");
+  const [customerId, setCustomerId] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleSubscribe = () => {
-    console.log(email);
     setSnackbarOpen(true);
   };
 
   const onEmailChange = (email) => {
     setEmail(email);
+  };
+
+  const onCustomerIdChange = (customerId) => {
+    setCustomerId(customerId);
   };
 
   const handleCloseSnackbar = () => {
@@ -33,6 +37,15 @@ const Subscribe = () => {
       />
       <Grid container justifyContent="center">
         <Grid item xs={4} justifyContent="center">
+          <TextField
+            style={{ marginTop: "1rem" }}
+            fullWidth
+            id="customer_id"
+            label="Customer Id"
+            variant="outlined"
+            value={customerId}
+            onChange={(e) => onCustomerIdChange(e.target.value)}
+          />
           <TextField
             style={{ marginTop: "1rem" }}
             fullWidth

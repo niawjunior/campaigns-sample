@@ -17,15 +17,12 @@ import { Link, useLocation } from "react-router-dom";
 function Layout({ children }) {
   const [state, setState] = useState(false);
   const location = useLocation();
-  console.log(location);
   const toggleDrawer = (open) => {
     setState(open);
   };
 
   const everGage = window.Evergage;
-  useEffect(() => {
-    console.log(everGage);
-  }, [everGage]);
+  useEffect(() => {}, [everGage]);
 
   const list = () => (
     <Box sx={{ width: 250 }} role="presentation">
