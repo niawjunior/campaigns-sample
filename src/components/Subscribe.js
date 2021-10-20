@@ -61,7 +61,6 @@ const Subscribe = () => {
             fullWidth
             variant="contained"
             style={{ marginTop: "1rem" }}
-            disabled={!email}
           >
             Subscribe
           </Button>
