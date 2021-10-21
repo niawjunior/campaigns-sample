@@ -8,10 +8,23 @@ import Layout from "./Layout";
 const Subscribe = () => {
   const [email, setEmail] = useState("");
   const [customerId, setCustomerId] = useState("");
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState({
+    isOpen: false,
+    message: "Thank you for subscribing",
+  });
 
   const handleSubscribe = () => {
-    setSnackbarOpen(true);
+    setSnackbarOpen({
+      isOpen: true,
+      message: "Thank you for subscribing",
+    });
+  };
+
+  const handleUnSubscribe = () => {
+    setSnackbarOpen({
+      isOpen: true,
+      message: "Thank you for unsubscribing",
+    });
   };
 
   const onEmailChange = (email) => {
@@ -23,15 +36,17 @@ const Subscribe = () => {
   };
 
   const handleCloseSnackbar = () => {
-    setSnackbarOpen(false);
+    setSnackbarOpen({
+      isOpen: false,
+    });
   };
   return (
     <Layout>
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        open={snackbarOpen}
+        open={snackbarOpen?.isOpen}
         onClose={handleCloseSnackbar}
-        message="Thank you for subscribing"
+        message={snackbarOpen?.message}
         key={"top-right"}
         autoHideDuration={2000}
       />
@@ -63,6 +78,16 @@ const Subscribe = () => {
             style={{ marginTop: "1rem" }}
           >
             Subscribe
+          </Button>
+          <Button
+            onClick={handleUnSubscribe}
+            id="unsubscribe_email_button"
+            fullWidth
+            variant="contained"
+            color="error"
+            style={{ marginTop: "1rem" }}
+          >
+            UnSubscribe
           </Button>
         </Grid>
       </Grid>
