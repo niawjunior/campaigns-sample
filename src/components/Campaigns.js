@@ -96,7 +96,7 @@ const Campaigns = () => {
               Share
             </p>
           </div>
-          <Box
+          {/* <Box
             style={{
               display: "flex",
               width: "40vw",
@@ -165,16 +165,16 @@ const Campaigns = () => {
                 ></div>
               )}
             </span>
-          </Box>
+          </Box> */}
         </CustomBoxStyled>
       </Box>
-      <div
+      {/* <div
         style={{
           height: "2px",
           marginTop: "65px",
           borderBottom: "1px solid rgb(237, 237, 237)",
         }}
-      ></div>
+      ></div> */}
     </>
   );
 };
