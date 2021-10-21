@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import styled from "@emotion/styled";
 const Campaigns = () => {
-  const [activeSection, setActiveSection] = useState("product-detail");
+  //   const [activeSection, setActiveSection] = useState("product-detail");
   const CustomBoxStyled = styled(Box)`
     position: absolute;
     width: 70vw;
