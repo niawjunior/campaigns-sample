@@ -26,6 +26,7 @@ const Subscribe = () => {
       message: "Thank you for unsubscribing",
     });
     window.Evergage?.removeCookies();
+    window.location.replace(window.location.origin);
   };
 
   const onEmailChange = (email) => {
