@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -42,8 +41,11 @@ function Layout({ children }) {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Toolbar>
+        <AppBar
+          position="static"
+          style={{ backgroundColor: "rgb(76, 82, 86)" }}
+        >
+          <Toolbar style={{ minHeight: "38px" }}>
             <IconButton
               id="nav_bar_toggle_drawer"
               onClick={() => toggleDrawer(true)}
@@ -64,7 +66,7 @@ function Layout({ children }) {
               variant="h6"
               sx={{ flexGrow: 1 }}
             >
-              Web campaign
+              Campaign
             </Typography>
             <Button
               id="nav_bar_second_home_loan"
@@ -77,6 +79,7 @@ function Layout({ children }) {
                   location?.pathname === "/second-home-loan"
                     ? "rgba(0, 0, 0, 0.04)"
                     : null,
+                fontSize: "12px",
               }}
             >
               Second Home Loan
@@ -93,13 +96,14 @@ function Layout({ children }) {
                   location?.pathname === "/subscribe"
                     ? "rgba(0, 0, 0, 0.04)"
                     : null,
+                fontSize: "12px",
               }}
             >
               Subscribe
             </Button>
           </Toolbar>
         </AppBar>
-        <Container fixed>{children}</Container>
+        <Box>{children}</Box>
       </Box>
       <Drawer anchor={"left"} open={state} onClose={() => toggleDrawer(false)}>
         {list()}
