@@ -50,7 +50,7 @@ const Campaigns = () => {
     }
   `;
   return (
-    <>
+    <div id="campaign-container">
       <Box
         id="campaign-hero-image"
         style={{
@@ -175,7 +175,7 @@ const Campaigns = () => {
           borderBottom: "1px solid rgb(237, 237, 237)",
         }}
       ></div> */}
-    </>
+    </div>
   );
 };
 export default Campaigns;
