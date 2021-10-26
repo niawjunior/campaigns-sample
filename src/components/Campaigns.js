@@ -22,10 +22,7 @@ const Campaigns = () => {
               >
                 Apply Online
               </button>
-              <p
-                id="content-text-5"
-                style={{ display: "flex", alignItems: "center" }}
-              >
+              <p class="content-text-5" id="content-text-5">
                 <img
                   width="20px"
                   src="https://www.scb.co.th/content/dam/scb/commons/icons/share.png"
