@@ -1,90 +1,27 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import styled from "@emotion/styled";
 const Campaigns = () => {
   const [activeSection, setActiveSection] = useState("product-detail");
-  const CustomBoxStyled = styled(Box)`
-    position: absolute;
-    width: 70vw;
-    height: 400px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding: 10px;
 
-    #content-text-1 {
-      font-weight: bold;
-      color: #ffffff;
-      text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-    }
-
-    #content-text-2 {
-      font-size: 48px;
-      color: #ffffff;
-      text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-    }
-
-    #content-text-3 {
-      font-weight: bold;
-      color: #ffffff;
-      text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-    }
-
-    #content-text-5 {
-      font-weight: bold;
-      color: #ffffff;
-      text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-      cursor: pointer;
-    }
-  `;
-
-  const CardXApplyButton = styled(Button)`
-    background-color: rgb(122, 88, 191);
-    height: 50px;
-    min-width: 144px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-    &:hover {
-      background-color: rgb(144, 107, 224);
-    }
-  `;
   return (
     <>
       <div id="campaign-container">
-        <Box
-          id="campaign-hero-image"
-          style={{
-            backgroundImage:
-              "url(https://www.scb.co.th/content/dam/scb/personal-banking/loans/home-loans/images/second-hand-web.jpg)",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center center",
-          }}
-          height="500px"
-          position="relative"
-          display="flex"
-          alignItems="center"
-        >
-          <CustomBoxStyled id="custom-box">
+        <div class="campaign-hero-image" id="campaign-hero-image">
+          <div class="custom-box" id="custom-box">
             <p id="content-text-1">MORTGAGES</p>
             <h1 id="content-text-2">Second-Hand Home Loan</h1>
             <p id="content-text-3">
               SCB has loan solutions for any home —second-hand home, foreclosed
               property or vacant land.
             </p>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                width: "240px",
-                justifyContent: "space-between",
-                marginTop: "50px",
-              }}
-            >
-              <CardXApplyButton id="content-text-4" variant="contained">
+            <div class="content-button">
+              <button
+                class="apply-button"
+                id="content-text-4"
+                variant="contained"
+              >
                 Apply Online
-              </CardXApplyButton>
+              </button>
               <p
                 id="content-text-5"
                 style={{ display: "flex", alignItems: "center" }}
@@ -97,8 +34,8 @@ const Campaigns = () => {
                 Share
               </p>
             </div>
-          </CustomBoxStyled>
-        </Box>
+          </div>
+        </div>
       </div>
       <div style={{ width: "70vw", display: "flex", justifyContent: "center" }}>
         <Box
