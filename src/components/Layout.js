@@ -45,9 +45,14 @@ function Layout({ children }) {
 
   const everGage = window.Evergage;
   useEffect(() => {
-    const isCampaign =
-      document.querySelector("div[data-evg-campaign-id]") || false;
-    setIsLoggedIn(isCampaign);
+    window.Evergage.DisplayUtil.pageElementLoaded(
+      "#campaign-container",
+      "html"
+    ).then((ele) => {
+      const isCampaign =
+        document.querySelector("div[data-evg-campaign-id]") || false;
+      setIsLoggedIn(isCampaign);
+    });
   }, [everGage]);
 
   const list = () => (
