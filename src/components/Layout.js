@@ -94,9 +94,7 @@ function Layout({ children }) {
               color="inherit"
               variant="h6"
               sx={{ flexGrow: 1 }}
-            >
-              Campaign
-            </Typography>
+            ></Typography>
             <Button
               id="nav_bar_second_home_loan"
               component={Link}
