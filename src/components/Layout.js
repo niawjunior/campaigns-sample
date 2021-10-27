@@ -13,15 +13,42 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { Link, useLocation } from "react-router-dom";
+import Snackbar from "@mui/material/Snackbar";
+
 function Layout({ children }) {
   const [state, setState] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const [snackbarOpen, setSnackbarOpen] = useState({
+    isOpen: false,
+    message: "Thank you for subscribing",
+  });
   const location = useLocation();
   const toggleDrawer = (open) => {
     setState(open);
   };
 
+  const handleUnSubscribe = () => {
+    setSnackbarOpen({
+      isOpen: true,
+      message: "Thank you for unsubscribing",
+    });
+    window.Evergage?.removeCookies();
+    window.location.replace(window.location.origin);
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen({
+      isOpen: false,
+    });
+  };
+
   const everGage = window.Evergage;
-  useEffect(() => {}, [everGage]);
+  useEffect(() => {
+    const isCampaign =
+      document.querySelector("div[data-evg-campaign-id]") || false;
+    setIsLoggedIn(isCampaign);
+  }, [everGage]);
 
   const list = () => (
     <Box sx={{ width: 250 }} role="presentation">
@@ -40,6 +67,14 @@ function Layout({ children }) {
 
   return (
     <>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={snackbarOpen?.isOpen}
+        onClose={handleCloseSnackbar}
+        message={snackbarOpen?.message}
+        key={"top-right"}
+        autoHideDuration={2000}
+      />
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="static"
@@ -84,23 +119,38 @@ function Layout({ children }) {
             >
               Second Home Loan
             </Button>
-            <Button
-              id="nav_bar_subscribe_button"
-              component={Link}
-              to={"/subscribe"}
-              variant="text"
-              color="inherit"
-              style={{
-                marginLeft: "10px",
-                background:
-                  location?.pathname === "/subscribe"
-                    ? "rgba(0, 0, 0, 0.04)"
-                    : null,
-                fontSize: "12px",
-              }}
-            >
-              Subscribe
-            </Button>
+            {isLoggedIn && (
+              <Button
+                onClick={handleUnSubscribe}
+                id="unsubscribe_email_button"
+                fullWidth
+                variant="contained"
+                color="error"
+                style={{ marginTop: "1rem" }}
+              >
+                UnSubscribe
+              </Button>
+            )}
+
+            {!isLoggedIn && (
+              <Button
+                id="nav_bar_subscribe_button"
+                component={Link}
+                to={"/subscribe"}
+                variant="text"
+                color="inherit"
+                style={{
+                  marginLeft: "10px",
+                  background:
+                    location?.pathname === "/subscribe"
+                      ? "rgba(0, 0, 0, 0.04)"
+                      : null,
+                  fontSize: "12px",
+                }}
+              >
+                Login
+              </Button>
+            )}
           </Toolbar>
         </AppBar>
         <Box>{children}</Box>

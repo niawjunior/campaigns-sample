@@ -69,7 +69,6 @@ body {
 }
 
 .apply-button {
-  background-color: rgb(122, 88, 191);
   height: 50px;
   min-width: 144px;
   font-weight: bold;
@@ -77,8 +76,21 @@ body {
   text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
   border-radius: 4px;
 }
-.apply-button:hover {
-  background-color: rgb(144, 107, 224);
+
+.apply-button-purple {
+  background-color: #7a58bf;
+}
+
+.apply-button-purple:hover {
+  background-color: #906be0;
+}
+
+.apply-button-red {
+  background-color: #f72560;
+}
+
+.apply-button-red:hover {
+  background-color: #ff4176;
 }
 
 button {

@@ -6,29 +6,25 @@ const Campaigns = () => {
   return (
     <>
       <div id="campaign-container">
-        <div class="campaign-hero-image" id="campaign-hero-image">
-          <div class="custom-box" id="custom-box">
+        <div className="campaign-hero-image" id="campaign-hero-image">
+          <div className="custom-box" id="custom-box">
             <p id="content-text-1">MORTGAGES</p>
             <h1 id="content-text-2">Second-Hand Home Loan</h1>
             <p id="content-text-3">
               SCB has loan solutions for any home —second-hand home, foreclosed
               property or vacant land.
             </p>
-            <div class="content-button">
-              <button
-                class="apply-button"
-                id="content-text-4"
-                variant="contained"
-              >
+            <div className="content-button">
+              <button className="apply-button" id="content-text-4">
                 Apply Online
               </button>
-              <p class="content-text-5" id="content-text-5">
+              <p className="content-text-5" id="content-text-5">
                 <img
                   width="20px"
                   src="https://www.scb.co.th/content/dam/scb/commons/icons/share.png"
                   alt="share-icon"
-                />{" "}
-                Share
+                />
+                &nbsp; Share
               </p>
             </div>
           </div>

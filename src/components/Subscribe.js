@@ -18,14 +18,6 @@ const Subscribe = () => {
       isOpen: true,
       message: "Thank you for subscribing",
     });
-  };
-
-  const handleUnSubscribe = () => {
-    setSnackbarOpen({
-      isOpen: true,
-      message: "Thank you for unsubscribing",
-    });
-    window.Evergage?.removeCookies();
     window.location.replace(window.location.origin);
   };
 
@@ -80,16 +72,6 @@ const Subscribe = () => {
             style={{ marginTop: "1rem" }}
           >
             Subscribe
-          </Button>
-          <Button
-            onClick={handleUnSubscribe}
-            id="unsubscribe_email_button"
-            fullWidth
-            variant="contained"
-            color="error"
-            style={{ marginTop: "1rem" }}
-          >
-            UnSubscribe
           </Button>
         </Grid>
       </Grid>
