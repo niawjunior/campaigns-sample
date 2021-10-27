@@ -123,12 +123,16 @@ function Layout({ children }) {
               <Button
                 onClick={handleUnSubscribe}
                 id="unsubscribe_email_button"
-                fullWidth
-                variant="contained"
-                color="error"
-                style={{ marginTop: "1rem" }}
+                variant="text"
+                component={Link}
+                to="/"
+                color="inherit"
+                style={{
+                  marginLeft: "10px",
+                  fontSize: "12px",
+                }}
               >
-                UnSubscribe
+                Logout
               </Button>
             )}
 
