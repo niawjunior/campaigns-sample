@@ -123,6 +123,7 @@ function Layout({ children }) {
               style={{
                 marginLeft: "10px",
                 fontSize: "12px",
+                display: "none",
               }}
             >
               Logout
