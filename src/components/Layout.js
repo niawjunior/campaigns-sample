@@ -116,7 +116,7 @@ function Layout({ children }) {
               Logout
             </Button>
             <Button
-              id="nav_bar_subscribe_button"
+              id="nav_bar_login_button"
               component={Link}
               to={"/subscribe"}
               variant="text"
