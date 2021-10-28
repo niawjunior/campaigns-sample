@@ -118,13 +118,13 @@ function Layout({ children }) {
             <Button
               id="nav_bar_login_button"
               component={Link}
-              to={"/subscribe"}
+              to={"/login"}
               variant="text"
               color="inherit"
               style={{
                 marginLeft: "10px",
                 background:
-                  location?.pathname === "/subscribe"
+                  location?.pathname === "/login"
                     ? "rgba(0, 0, 0, 0.04)"
                     : null,
                 fontSize: "12px",
