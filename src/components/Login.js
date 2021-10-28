@@ -18,6 +18,7 @@ const Login = () => {
       isOpen: true,
       message: "Thank you for subscribing",
     });
+    console.log(window.Evergage.getCurrentPage());
     window.location.replace(window.location.origin);
   };
 
