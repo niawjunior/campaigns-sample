@@ -31,6 +31,7 @@ const SecondHandHomeLoan = () => {
               <button
                 className="apply-button content-text-4"
                 id="second-hand-home-loan-content-text-4"
+                data-evg-clickthrough
               >
                 Apply Online
               </button>
