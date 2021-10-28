@@ -4,8 +4,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -74,18 +72,7 @@ function Layout({ children }) {
           position="static"
           style={{ backgroundColor: "rgb(76, 82, 86)" }}
         >
-          <Toolbar style={{ minHeight: "38px" }}>
-            <IconButton
-              id="nav_bar_toggle_drawer"
-              onClick={() => toggleDrawer(true)}
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
+          <Toolbar style={{ minHeight: "38px", padding: "5px 15px 5px 15px" }}>
             <Typography
               id="nav_bar_home_page_link"
               style={{ textDecoration: "none" }}
@@ -94,8 +81,10 @@ function Layout({ children }) {
               color="inherit"
               variant="h6"
               sx={{ flexGrow: 1 }}
-            ></Typography>
-            <Button
+            >
+              Home Loan
+            </Typography>
+            {/* <Button
               id="nav_bar_second_home_loan"
               component={Link}
               to={"/second-home-loan"}
@@ -110,7 +99,7 @@ function Layout({ children }) {
               }}
             >
               Second Home Loan
-            </Button>
+            </Button> */}
             <Button
               onClick={handleUnSubscribe}
               id="unsubscribe_email_button"

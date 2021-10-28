@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 
 import Layout from "./Layout";
-const Subscribe = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [customerId, setCustomerId] = useState("");
   const [snackbarOpen, setSnackbarOpen] = useState({
@@ -79,4 +79,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export default Login;

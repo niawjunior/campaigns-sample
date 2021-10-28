@@ -1,31 +1,36 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-const Campaigns = () => {
+const GenericHomeLoan = () => {
   const [activeSection, setActiveSection] = useState("product-detail");
 
   return (
     <>
-      <div id="campaign-container">
-        <div className="campaign-hero-image" id="campaign-hero-image">
-          <div className="custom-box" id="custom-box">
-            <p id="content-text-1">MORTGAGES</p>
-            <h1 id="content-text-2">Second-Hand Home Loan</h1>
-            <p id="content-text-3">
-              SCB has loan solutions for any home —second-hand home, foreclosed
-              property or vacant land.
+      <div id="generic-home-loan-campaign-container">
+        <div
+          className="campaign-hero-image"
+          id="generic-home-loan-campaign-hero-image"
+        >
+          <div className="custom-box" id="generic-home-loan-custom-box">
+            <p id="generic-home-loan-content-text-1" className="content-text-1">
+              MORTGAGES
+            </p>
+            <h1
+              id="generic-home-loan-content-text-2"
+              className="content-text-2"
+            >
+              Generic Home Loan
+            </h1>
+            <p id="generic-home-loan-content-text-3" className="content-text-3">
+              Because life starts at home. SCB is ready to help you reach for
+              your dream.
             </p>
             <div className="content-button">
-              <button className="apply-button" id="content-text-4">
-                Apply Online
+              <button
+                className="apply-button content-text-4"
+                id="generic-home-loan-content-text-4"
+              >
+                Explore
               </button>
-              <p className="content-text-5" id="content-text-5">
-                <img
-                  width="20px"
-                  src="https://www.scb.co.th/content/dam/scb/commons/icons/share.png"
-                  alt="share-icon"
-                />
-                &nbsp; Share
-              </p>
             </div>
           </div>
         </div>
@@ -112,4 +117,4 @@ const Campaigns = () => {
     </>
   );
 };
-export default Campaigns;
+export default GenericHomeLoan;

@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { Switch, Route, useLocation } from "react-router-dom";
 
 import Home from "./components/Home";
-import Subscribe from "./components/Subscribe";
-import SecondHomeLoan from "./components/SecondHomeLoan";
+import Login from "./components/Login";
 
 function usePageViews() {
   let location = useLocation();
@@ -17,11 +16,8 @@ function App() {
   usePageViews();
   return (
     <Switch>
-      <Route path="/second-home-loan">
-        <SecondHomeLoan />
-      </Route>
-      <Route path="/subscribe">
-        <Subscribe />
+      <Route path="/login">
+        <Login />
       </Route>
       <Route path="/">
         <Home />

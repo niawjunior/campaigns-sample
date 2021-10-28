@@ -21,36 +21,46 @@ body {
   padding: 10px;
 }
 
-#content-text-1 {
+.content-text-1 {
   font-weight: bold;
   color: #ffffff;
   text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
 }
 
-#content-text-2 {
+.content-text-2 {
   font-size: 48px;
   color: #ffffff;
   text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
 }
 
-#content-text-3 {
+.content-text-3 {
   font-weight: bold;
   color: #ffffff;
   text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-}
-
-#content-text-5 {
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: rgb(0 0 0 / 70%) 0px 1px 2px;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
 }
 
 .campaign-hero-image {
+  background-image: url("https://www.scb.co.th/content/dam/scb/personal-banking/loans/home-loans/images/scb-new-loan-tn.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.campaign-hero-image2 {
   background-image: url("https://www.scb.co.th/content/dam/scb/personal-banking/loans/home-loans/images/second-hand-web.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.campaign-hero-image3 {
+  background-image: url("https://www.scb.co.th/content/dam/scb/personal-banking/loans/home-loans/images/refinance-loan-tn.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
