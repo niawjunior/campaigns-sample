@@ -102,7 +102,7 @@ function Layout({ children }) {
             </Button> */}
             <Button
               onClick={handleUnSubscribe}
-              id="unsubscribe_email_button"
+              id="nav_bar_logout_button"
               variant="text"
               component={Link}
               to="/"
